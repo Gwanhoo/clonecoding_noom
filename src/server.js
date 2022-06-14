@@ -8,5 +8,5 @@ app.set("views", __dirname + "/views");
 app.get("/",  (req, res)  => res.render("home"));
 app.get("/*",  (req, res)  => res.render("/"));
 // 어떤 주소를 입력해서 서버에 접근하더라도 사용자는 home.pug를 받음
-const handleListen = () => console.log("Listenling on http://lgit ocalhost:3000")
+const handleListen = () => console.log("Listenling on http://localhost:3000")
 app.listen(3000,handleListen);
