@@ -3,6 +3,7 @@ import express from "express";
 const app = express();
 app.set("view engine", "pug");
 app.set("views", __dirname + "/views");
+app.use("/public",express.static(__dirname + "/public"));
 // _dirname -> Node.js 기본 전역 변수, 현재 실행하는 폴더의 경로
 // 이 프로젝트에서는 Noom의 src 폴더 경로가 할당되어 있음.
 app.get("/",  (req, res)  => res.render("home"));
